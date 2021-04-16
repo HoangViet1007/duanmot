@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 10, 2020 lúc 11:15 AM
+-- Thời gian đã tạo: Th4 16, 2021 lúc 05:43 PM
 -- Phiên bản máy phục vụ: 10.4.16-MariaDB
 -- Phiên bản PHP: 7.4.12
 
@@ -75,7 +75,9 @@ INSERT INTO `danh_gia` (`id`, `so_sao`, `noi_dung`, `ngay_danh_gia`, `gio_danh_g
 (4, 4, 'Very nice room, I am very satisfied, I think this is the most beautiful hotel I have ever been to', '2020-12-04', '17:55:06', b'0', 6, 'ps4'),
 (6, 5, 'Very nice room, I am very satisfied, I think this is the most beautiful hotel I have ever been to', '2020-12-04', '18:36:59', b'0', 5, 'ps4'),
 (7, 5, 'The room is very nice, I am very satisfied with the hotel room, I will recommend to my friends and relatives about this hotel, A great hotel', '2020-12-06', '17:48:03', b'0', 2, 'ps5'),
-(8, 4, 'The room is very nice, I am very satisfied with the hotel room, I will recommend to my friends and relatives about this hotel, A great hotel', '2020-12-06', '17:48:41', b'0', 3, 'ps5');
+(8, 4, 'The room is very nice, I am very satisfied with the hotel room, I will recommend to my friends and relatives about this hotel, A great hotel', '2020-12-06', '17:48:41', b'0', 3, 'ps5'),
+(13, 4, 'The room is very nice, I am very satisfied with the hotel room, I will recommend to my friends and relatives about this hotel, A great hotel\r\n\r\n', '2020-12-14', '09:53:54', b'0', 2, 'ps4'),
+(15, 4, 'ahahhaha', '2020-12-14', '22:46:25', b'0', 6, 'ps8');
 
 -- --------------------------------------------------------
 
@@ -105,12 +107,12 @@ INSERT INTO `dat_phong` (`id`, `ten_nguoi_dat`, `sdt`, `email`, `ngay_tao`, `nga
 (3, 'Ngô Hồng Nguyên', '0583765731', 'viettuyet23112001@gmail.com', '2020-10-02', '2020-10-05', '2020-10-08', 2, 7),
 (4, 'Chúc Anh Quân ', '0855009301', 'chonggiongcho@gmail.com', '2020-09-02', '2020-09-05', '2020-09-07', 2, 6),
 (5, 'Nguyễn Đức Thắng', '0583465730', 'thangndph10697@fpt.edu.vn', '2020-08-04', '2020-08-06', '2020-08-09', 2, 6),
-(11, 'Hoàng Văn Hòa', '0364118111', 'hoangviet10072001@gmail.com', '2020-12-05', '2020-12-08', '2020-12-10', 0, 7),
-(12, 'Hoàng Việt Dương', '0583465199', 'viettuyet10072001@gmail.com', '2020-12-06', '2020-12-12', '2020-12-14', 0, 7),
-(13, 'Chúc Anh Quân', '0827541634', 'hoangviet10172001@gmail.com', '2020-12-07', '2020-12-09', '2020-12-11', 0, 7),
-(14, 'Chúc Anh Quân', '0827541634', 'hoangviet10172001@gmail.com', '2020-12-08', '2020-12-15', '2020-12-18', 0, 6),
-(15, 'Lê Anh Vũ', '0355755690', 'vu@gmail.com', '2020-12-09', '2020-12-17', '2020-12-19', 0, 5),
-(16, 'Trần Anh Mỹ', '0355755234', 'my@gmail.com', '2020-12-10', '2020-12-12', '2020-12-14', 0, 3);
+(11, 'Hoàng Văn Hòa', '0364118111', 'hoangviet10072001@gmail.com', '2020-12-05', '2020-12-08', '2020-12-09', 2, 7),
+(18, 'Hoàng Việt Dương', '0583465199', 'viettuyet10072001@gmail.com', '2020-12-14', '2020-12-15', '2020-12-17', 0, 9),
+(20, 'Hoàng Việt Dương', '0583465199', 'viettuyet10072001@gmail.com', '2020-12-14', '2020-12-20', '2020-12-22', 0, 9),
+(23, 'Hoàng Việt Dương', '0583465199', 'viettuyet10072001@gmail.com', '2020-12-14', '2020-12-23', '2020-12-25', 0, 9),
+(32, 'Chúc Anh Quân', '0827541634', 'hoangviet10172001@gmail.com', '2020-12-14', '2020-12-16', '2020-12-20', 0, 2),
+(34, 'Hoàng Văn Hòa', '0355755697', 'hoangviet10072001@gmail.com', '2020-12-14', '2020-12-16', '2020-12-18', 1, 7);
 
 -- --------------------------------------------------------
 
@@ -229,13 +231,14 @@ CREATE TABLE `loai_phong` (
 --
 
 INSERT INTO `loai_phong` (`id`, `ten_loai`, `hinh`, `so_luong_phong`, `so_phong_da_dat`, `so_phong_trong`, `don_gia`, `gioi_thieu`, `mo_ta`, `dac_biet`) VALUES
-(2, 'Deluxe Room', 'public/image/loai_phong/5fbf897c72cbd_deluxe-room.jpg', 10, '0', '10', 800, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
-(3, 'Double Room', 'public/image/loai_phong/5fbf89caa9db4_double-room.jpg', 12, '2', '10', 1200, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
+(2, 'Deluxe Room', 'public/image/loai_phong/5fbf897c72cbd_deluxe-room.jpg', 10, '2', '8', 800, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
+(3, 'Double Room', 'public/image/loai_phong/5fbf89caa9db4_double-room.jpg', 12, '0', '12', 1200, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
 (4, 'Single Room', 'public/image/loai_phong/5fbf89faba561_single-room.jpg', 12, '0', '12', 790, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
-(5, 'Family Room', 'public/image/loai_phong/5fbf8a48a2924_family_room.jpg', 14, '1', '13', 1090, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
-(6, 'King Room', 'public/image/loai_phong/5fbf8aa68fa99_king-room.jpg', 9, '1', '8', 900, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
+(5, 'Family Room', 'public/image/loai_phong/5fbf8a48a2924_family_room.jpg', 14, '0', '14', 1090, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
+(6, 'King Room', 'public/image/loai_phong/5fbf8aa68fa99_king-room.jpg', 9, '0', '9', 900, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
 (7, 'Honeymoon Room', 'public/image/loai_phong/5fbf8b1312877_honey-room.jpg', 12, '2', '10', 780, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
-(8, 'Neoclassical Room', 'public/image/loai_phong/5fbf8b5ecdf9f_tan-co-dien-room.jpg', 13, '0', '13', 1200, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0');
+(8, 'Neoclassical Room', 'public/image/loai_phong/5fbf8b5ecdf9f_tan-co-dien-room.jpg', 13, '4', '9', 1200, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.', b'0'),
+(9, 'haha', 'public/image/loai_phong/5fd70414072f6_nhung-mau-ke-sach-dep_040525836.jpg', 2, '2', '0', 1200, 'phòng đẹp', 'phòng đẹp', b'0');
 
 -- --------------------------------------------------------
 
@@ -260,7 +263,8 @@ INSERT INTO `orders` (`id`, `thue_VAT`, `tong_tien`, `ngay_tao`, `ma_dat_phong`)
 (2, 0.05, 2520, '2020-12-05', 2),
 (3, 0.05, 2457, '2020-10-08', 3),
 (4, 0.05, 1890, '2020-09-07', 4),
-(5, 0.05, 2835, '2020-08-09', 5);
+(5, 0.05, 2835, '2020-08-09', 5),
+(7, 0.05, 819, '2020-12-09', 11);
 
 -- --------------------------------------------------------
 
@@ -357,8 +361,9 @@ INSERT INTO `users` (`id`, `mat_khau`, `ho_ten`, `hinh`, `email`, `so_chung_minh
 ('ps1', '123456789', 'Hoàng Quốc Bảo Việt', 'public/image/users/5fb60ee3adfa5_87559561_219037232826776_616655835103232000_n.jpg', 'hoangviet10072001@gmail.com', '033201001239', '0355755697', 1),
 ('ps2', '123456789', 'Đào Ánh Tuyết', 'public/image/users/5fbf87b459a43_vk.jpg', 'tuyet@gmail.com', '033201001238', '0827541636', 1),
 ('ps3', '123456789', 'Nguyễn Duy Việt Anh', 'public/image/users/5fbf8801e4452_56b1277997b26aec33a3.jpg', 'anhndvph10550@fpt.edu.vn', '033201001228', '0859850000', 2),
-('ps4', '123456789', 'Chúc Anh Quân', 'public/image/users/5fc1357ca22df_123310298_996218494220871_5114419063741368147_n.jpg', 'hoangviet10172001@gmail.com', '033201001211', '0827541634', 2),
-('ps5', '123456789', 'Trần Hoài Thương', 'public/image/users/5fcd0aba9ba2c_121092441_359184295201933_6285663945253883419_o.jpg', 'viettuyet10072001@gmail.com', '032001001289', '0583465190', 2);
+('ps4', '123456789', 'Chúc Anh Quân', 'public/image/users/5fc1357ca22df_123310298_996218494220871_5114419063741368147_n.jpg', 'hoangviet10172001@gmail.com', '033201001211', '0827541656', 2),
+('ps5', '123456789', 'Trần Hoài Thương', 'public/image/users/5fcd0aba9ba2c_121092441_359184295201933_6285663945253883419_o.jpg', 'viettuyet10072001@gmail.com', '032001001289', '0583465190', 2),
+('ps8', '123456789', 'Hoàng anh', 'public/image/users/5fd7dd0d8fbf9_31.jpg', 'hoangviet10072001@gmail.com', '033201001228', '0355755697', 2);
 
 -- --------------------------------------------------------
 
@@ -377,8 +382,7 @@ CREATE TABLE `vai_tro` (
 
 INSERT INTO `vai_tro` (`id`, `ten_vai_tro`) VALUES
 (1, 'Nhân viên'),
-(2, 'Khách hàng'),
-(3, 'Chủ cửa hàng');
+(2, 'Khách hàng');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -470,19 +474,19 @@ ALTER TABLE `vai_tro`
 -- AUTO_INCREMENT cho bảng `binh_luan`
 --
 ALTER TABLE `binh_luan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `danh_gia`
 --
 ALTER TABLE `danh_gia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `dat_phong`
 --
 ALTER TABLE `dat_phong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT cho bảng `hinh_anh_khach_san`
@@ -500,19 +504,19 @@ ALTER TABLE `hinh_anh_loai_phong`
 -- AUTO_INCREMENT cho bảng `lien_he`
 --
 ALTER TABLE `lien_he`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `loai_phong`
 --
 ALTER TABLE `loai_phong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `slide_anh`
