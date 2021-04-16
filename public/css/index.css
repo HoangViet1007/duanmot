@@ -1,0 +1,241 @@
+/*------- tt khachs sanj-------*/
+
+#btn-lxkze{
+    background: #ffffff;
+    border-style: solid;
+    border-color: #CCA772;
+    border-width: 2px;
+    color: #deb668;
+    padding: 10px 25px;
+    border-radius: 2px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    transition: .3s;
+}
+#btn-lxkze:hover{
+    background-color: #CCA772;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    margin-top: -5px;
+    transition: .3s;
+}
+#btn-lxkze:hover span{
+    color: white;
+}
+/*-------   sp   -------------*/
+/*left*/
+.all-sp-left{
+    position: relative;
+    height: 450px;
+
+}
+.iamge-left{
+    height:400px ;
+}
+.image-left img{
+    width: 100%;
+    height: 400px;
+}
+.left-detail{
+    width: 540px;
+    height: 50px;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    position: absolute;
+    top: 400px;
+    overflow: hidden;
+}
+.txt{
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+
+}
+.txt ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+}
+.txt ul li{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px dotted gray;
+    padding: 5px 5px;
+    margin: 0 15px;
+}
+.txt a{
+    color: gray;
+}
+.all-sp-left:hover .txt{
+    transition: 0.5s;
+    top: -46px;
+}
+.image-left{
+    overflow: hidden;
+}
+.image-left>img{
+    transition: .5s;
+}
+.all-sp-left:hover .image-left>img{
+    transform: scale(1.07);
+    transition: .5s;
+}
+.price{
+    z-index: 999;
+    position: absolute;
+    color: gray;
+    width: 100px;
+    height: 28px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: white;
+    top: 20px;
+    left: 30px;
+}
+/*right*/
+.all-sp-right{
+    width: 100%;
+    height: 210px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.image-right{
+    height: 175px;
+    width: 100%;
+}
+.image-right img{
+    width: 100%;
+    height: 175px;
+}
+.right-detail{
+    height: 35px;
+    width: 100%;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+}
+.txt-right{
+    position: absolute;
+    transition: .5s;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.txt-right ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -28px;
+}
+.txt-right ul li{
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    border: 1px dotted gray;
+    padding: 0px 5px;
+    margin: 0 15px;
+}
+.txt-right a{
+    color: gray;
+}
+.all-sp-right:hover .txt-right{
+    top: -33px;
+    transition: .5s;
+}
+.image-right{
+    overflow: hidden;
+}
+.image-right>img{
+    transition: .5s;
+}
+.all-sp-right:hover .image-right>img{
+    transform: scale(1.07);
+    transition: .5s;
+}
+
+ /* css đoạn những người đánh giá tốt  */
+
+
+ /* css cho blog ở index */
+.blog{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+.box-blog{
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-bottom: 30px;
+}
+.box-blog-detail{
+   padding: 20px 20px 30px 20px;
+}
+.box-blog-detail-tt a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+.box-blog-detail-tt a:hover{
+    text-decoration: none;
+    color:  #CCA772;
+}
+.box-blog-detail-nt{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-left: 25px;
+}
+.box-blog-detail-nt p{
+    font-size: 13px;
+    opacity: 0.7;
+}
+.box-blog-detail-nt-day{
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    grid-gap: 15px;
+}
+.box-blog-detail-nt-cmt{
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    grid-gap: 15px;
+}
+.aaa{
+    padding-top: 3px;
+}
+.read-more a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding-left: 30px;
+    transition: .6s;
+}
+.read-more a:hover{
+    text-decoration: none;
+    color:  #CCA772;
+    transform: scale(1.1);
+    transition: .6s;
+}
+.box-blog-img img:hover {
+    transform: scale(1.08);
+    transition: 0.5s;
+  
+}
+.box-blog-img{
+    overflow: hidden;
+    
+}
+.box-blog-img>img{
+    transition: 0.5s;
+}
+.box-blog:hover{
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
